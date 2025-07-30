@@ -1,0 +1,22 @@
+<view class="box_timeing_img" id="v7box_timeing_img">
+
+    <block wx:if="{{showTimgMask&&(!showScreenMask)}}">
+        <view class="boxtable_screen_ad_mask" wx:if="{{box.module_contents.length>0}}">
+            <view wx:if="{{popupimghasSucceed}}" class="mask-content" style="width:{{box.frame_style_attrs.width}}rpx;height:{{box.frame_style_attrs.height}}+60rpx;">
+                <view class="morebannerstyle" wx:if="{{box.module_contents.length>0}}" style="width:{{box.inside_style_attrs.width}}rpx;height:{{box.inside_style_attrs.height}}rpx;">
+                    <view class="close-timing" bindtap="closetiming">
+                        <image class="image" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/timingclose.png"></image>
+                    </view>
+                    <swiper class="swiper home" style="width:{{box.frame_style_attrs.width}}rpx;height:{{box.frame_style_attrs.height}}rpx;position: relative;" indicator-dots="{{box.attrs.swiper.indicator_dots}}" indicator-color="{{box.attrs.swiper.indicator_color}}" indicator-active-color="{{box.attrs.swiper.indicator_active_color}}" autoplay="{{box.attrs.swiper.autoplay}}" circular="{{box.attrs.swiper.circular}}" interval="{{box.attrs.swiper.interval}}" duration="{{box.attrs.swiper.duration}}" >
+                        <block wx:for="{{box.module_contents}}" wx:key="key" wx:for-index="key">
+                            <swiper-item>
+                                <boxcontainer style="width:{{item.attrs.width}}rpx;height:{{item.attrs.height}}rpx;margin-bottom:{{item.attrs.margin_bottom}}rpx;margin-top:{{item.attrs.margin_top}}rpx;margin-left:{{item.attrs.margin_left}}rpx;margin-right:{{item.attrs.margin_right}}rpx;border-radius:{{item.attrs.border_radius}}rpx;overflow: hidden;position: relative;" boxcontainer="{{item}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMask"  bind:timeingMask="timeingMask"  bind:mobliestatus="mobliestatus"></boxcontainer>
+                            </swiper-item>
+                        </block>
+                    </swiper>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+

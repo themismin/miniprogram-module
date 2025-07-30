@@ -1,0 +1,28 @@
+<view class="screen-mask" wx:if="{{showScreenMask}}">
+  <view class="screen-body">
+    <swiper class="swiper" indicator-dots="true" style="width: {{box.inside_style_attrs.width}}rpx; height: {{box.inside_style_attrs.height}}rpx;">
+      <block wx:for="{{box.module_contents}}">
+        <swiper-item>
+          <block wx:if="{{item.operation_type == 'CONSULTATION_SERVICE_REGISTRATION'}}">
+            <block wx:if="{{snsapi_phonenumber == 0}}">
+              <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                <image src="{{item.content}}" style="width: {{box.inside_style_attrs.width}}rpx; height: {{box.inside_style_attrs.height}}rpx;" />
+              </button>
+            </block>
+            <block wx:else>
+              <button bind:tap="apply">
+                <image src="{{item.content}}" style="width: {{box.inside_style_attrs.width}}rpx; height: {{box.inside_style_attrs.height}}rpx;" />
+              </button>
+            </block>
+          </block>
+          <block wx:else>
+            <button>
+              <image src="{{item.content}}" style="width: {{box.inside_style_attrs.width}}rpx; height: {{box.inside_style_attrs.height}}rpx;" />
+            </button>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="screen-btn close" bind:tap="close"></view>
+  </view>
+</view>

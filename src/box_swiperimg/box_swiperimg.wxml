@@ -1,0 +1,12 @@
+<view class="box_swiperimg" id="v7box_swiperimg">
+
+    <view wx:if="{{box.module_contents.length>0}}" style="width:{{box.frame_style_attrs.width}}rpx;height:{{box.frame_style_attrs.height}}rpx;background-color:{{box.frame_style_attrs.background_color}};background-image:url({{box.frame_style_attrs.background_img}});background-size: 750rpx {{box.frame_style_attrs.height}}rpx;padding-top:{{box.frame_style_attrs.padding_top}}rpx;padding-left:{{box.frame_style_attrs.padding_left}}rpx;padding-right:{{box.frame_style_attrs.padding_right}}rpx;padding-bottom:{{box.frame_style_attrs.padding_bottom}}rpx;margin-top:{{box.frame_style_attrs.margin_top}}rpx;margin-left:{{box.frame_style_attrs.margin_left}}rpx;margin-right:{{box.frame_style_attrs.margin_right}}rpx;margin-bottom:{{box.frame_style_attrs.margin_bottom}}rpx;position: relative;box-sizing:border-box;">
+        <swiper style="width:{{box.inside_style_attrs.width}}rpx;height:{{box.inside_style_attrs.height}}rpx;background-color:{{box.inside_style_attrs.background_color}};margin-top:{{box.inside_style_attrs.margin_top}}rpx;margin-left:{{box.inside_style_attrs.margin_left}}rpx;margin-right:{{box.inside_style_attrs.margin_right}}rpx;margin-bottom:{{box.inside_style_attrs.margin_bottom}}rpx;padding-top:{{box.inside_style_attrs.padding_top}}rpx;padding-left:{{box.inside_style_attrs.padding_left}}rpx;padding-right:{{box.inside_style_attrs.padding_right}}rpx;padding-bottom:{{box.inside_style_attrs.padding_bottom}}rpx;border-radius:{{box.inside_style_attrs.border_radius}}rpx;border-shadow:{{box_shadow}};box-sizing:border-box;" indicator-dots="{{box.attrs.swiper.indicator_dots}}" indicator-color="{{box.attrs.swiper.indicator_color}}" indicator-active-color="{{box.attrs.swiper.indicator_active_color}}" autoplay="{{box.attrs.swiper.autoplay}}" circular="{{box.attrs.swiper.circular}}" interval="{{box.attrs.swiper.interval}}" duration="{{box.attrs.swiper.duration}}" >
+            <block wx:for="{{box.module_contents}}" wx:key="key" wx:for-index="key">
+                <swiper-item>
+                    <boxcontainer style="position: relative;" boxcontainer="{{item}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMask"  bind:mobliestatus="mobliestatus"></boxcontainer>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

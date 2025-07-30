@@ -1,0 +1,20 @@
+.box_right_netmonitor {
+    width: 100%;
+    margin: 0rpx 0rpx 0rpx 0rpx;
+    position: relative;
+}
+.box_right_netmonitor .left-easeIn {
+    position: absolute;
+    height: 80rpx;
+    box-shadow: 2rpx 6rpx 15rpx 0rpx rgba(0, 0, 0, 0.25);
+    border-radius: 100rpx 0rpx 0rpx 100rpx;
+    display: flex;
+    align-items: center;
+}
+.box_right_netmonitor .left-easeIn .tabs {
+    display: flex;
+    border-right: 1rpx solid #484848;
+}
+.box_right_netmonitor .left-easeIn .tabs:last-child {
+    border-right: none !important;
+}

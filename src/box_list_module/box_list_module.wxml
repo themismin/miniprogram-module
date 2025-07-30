@@ -1,0 +1,41 @@
+
+<view class="usermenulist_container">
+    <view class="usermenulistcontent">
+        <block wx:if="{{box.module_contents.length>0}}">
+            <view wx:for="{{box.module_contents}}" wx:key="index" >
+                <block wx:if="{{item.operation_type!='SHARE'&&item.operation_type!='PLAY_VIDEO'&&item.operation_type!='SCROLL_TO_TOP'&&item.operation_type!='JUMP_IDENTITY'}}">
+                    <view class="usermenulistitem" bindtap='gotoTarget' data-item="{{item}}" data-dot="{{item.dot}}">
+                        <view class="title" >
+                            <image src="{{item.active?item.operation_attrs.after_content:item.content}}" style="width:30rpx;height:30rpx;border-radius:{{item.attrs.border_radius}}rpx;overflow:hidden;vertical-align: middle;margin-right:10rpx" />
+                            {{item.title}}
+                        </view>
+                        <view class="rightitem">
+                            <image class="rightarrows" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/rightarrows.png" />
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{item.operation_type=='SHARE'}}">
+                    <view class="usermenulistitem" bindtap='gotoTarget' data-item="{{item}}" data-dot="{{item.dot}}">
+                        <button class="share" open-type="share" class="usermenushare">
+                            <view class="title">推荐给好友</view>
+                            <view class="rightitem">
+                                <image class="rightarrows" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/rightarrows.png" />
+                            </view>
+                        </button>
+                    </view>
+                </block>
+                <block wx:if="{{item.operation_type=='JUMP_IDENTITY'}}">
+                    <view class="usermenulistitem" bindtap='gotoTarget' data-item="{{item}}" data-dot="{{item.dot}}">
+                        <view class="title">
+                            <image src="{{item.operation_attrs.whether_identity?item.operation_attrs.after_content:item.content}}" style="width:30rpx;height:30rpx;border-radius:{{item.attrs.border_radius}}rpx;overflow:hidden;vertical-align: middle;margin-right:10rpx" />
+                            {{item.operation_attrs.whether_identity?(item.operation_attrs.target_text?item.operation_attrs.target_text:item.title):item.title}}
+                        </view>
+                        <view class="rightitem">
+                            <image class="rightarrows" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/rightarrows.png" />
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>
+</view>

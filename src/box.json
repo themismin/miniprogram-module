@@ -1,0 +1,21 @@
+{
+  "component": true,
+  "usingComponents": {
+    "boxfivefixedimg": "./box_five_fixed_img/box_five_fixed_img",
+    "boxfixedrightbottommenu":"./box_fixed_right_bottom_menu/box_fixed_right_bottom_menu",
+    "boxinfinitescrollmenu":"./box_infinite_scroll_menu/box_infinite_scroll_menu",
+    "boxlistsingleimg":"./box_list_single_img/box_list_single_img",
+    "boxmnavigetionmenu":"./box_mnavigetion_menu/box_mnavigetion_menu",
+    "boxrightnetmonitor":"./box_right_netmonitor/box_right_netmonitor",
+    "boxsingleimage":"./box_singleimage/box_singleimage",
+    "boxswiperimg":"./box_swiperimg/box_swiperimg",
+    "boxtablescreen-ad":"./box_table_screen_ad/box_table_screen_ad",
+    "boxtimeingimg":"./box_timeing_img/box_timeing_img",
+    "boxcontainer": "./boxdetails",
+    "boxbottomnavmenu": "./box_bottom_nav_menu/box_bottom_nav_menu",
+    "boxlistmodule":"./box_list_module/box_list_module",
+    "upadteuserinformation":"/components/upadteuserinformation/index",
+    "boxmodulenavmenu":"./box_module_nav_menu/box_module_nav_menu",
+    "boxpopupad": "./box_popup_ad/box_popup_ad"
+  }
+}

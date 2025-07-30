@@ -1,0 +1,8 @@
+<view class="box_right_netmonitor" id="v7box_right_netmonitor">
+    <!-- 右侧固定弹出浮动菜单 -->
+    <view wx:if="{{box.module_contents.length>0}}" style='background-color:{{box.frame_style_attrs.background_color}};position: fixed;bottom:{{leftbutton}}rpx;left:calc(100% - 35px);z-index:99' class='left-easeIn' animation="{{animation}}" id='leftbutton' bindtap='clickleftbutton'>
+        <view wx:for="{{box.module_contents}}" class='tabs' wx:key='index'>
+            <boxcontainer style="width:{{item.attrs.width}}rpx;height:{{item.attrs.height}}rpx;margin-bottom:{{item.attrs.margin_bottom}}rpx;margin-top:{{item.attrs.margin_top}}rpx;margin-left:{{item.attrs.margin_left}}rpx;margin-right:{{item.attrs.margin_right}}rpx;border-radius:{{item.attrs.border_radius}}rpx;overflow: hidden;position: relative;" boxcontainer="{{item}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMask"  bind:mobliestatus="mobliestatus"></boxcontainer>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,38 @@
+.usermenulist_container{
+    background: #fff;
+    width: 100%;
+}
+.usermenulistcontent{
+    width: 690rpx;
+    margin:0 auto 30rpx;
+}
+.usermenulistitem {
+    display: flex;
+    height: 90rpx;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15rpx 0rpx 15rpx 0rpx;
+    box-sizing: border-box;
+    color: #595757; 
+}
+.usermenulistitem .title{
+    color: #595757;
+    font-size: 26rpx;
+    line-height: 44rpx;
+    font-weight: bold;
+}
+.usermenulistitem .rightarrows {
+    width: 13rpx;
+    height: 22rpx;
+}
+.usermenulistitem .usermenushare{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    line-height:44rpx;
+    border-radius: 0rpx;
+    background-color: rgba(0, 0, 0, 0) !important;
+}

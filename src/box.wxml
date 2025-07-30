@@ -1,0 +1,173 @@
+<view class="morebox" id="v7box">
+  <!-- 单张图片 -->
+  <block wx:if="{{showway=='SINGLE_IMAGE'}}">
+    <boxsingleimage boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxsingleimage>
+  </block>
+  <!--  列表广告 -->
+  <block wx:if="{{showway=='LIST_AD'}}">
+    <boxlistsingleimg boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxlistsingleimg>
+  </block>
+  <!-- 轮播图 -->
+  <block wx:if="{{showway=='CAROUSEL'}}">
+    <boxswiperimg boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxswiperimg>
+  </block>
+
+  <!-- 开机屏广告 -->
+  <block wx:if="{{showway=='BOOT_SCREEN'}}">
+    <boxtablescreen-ad boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxtablescreen-ad>
+  </block>
+  <!--  三大块图 -->
+  <block wx:if="{{showway=='THREE_BLOCK_IMAGE'}}">
+    <boxfivefixedimg boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxfivefixedimg>
+  </block>
+  <!-- 右侧固定滑动 -->
+  <block wx:if="{{showway=='SWIPE_RIGHT'}}">
+    <boxrightnetmonitor boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxrightnetmonitor>
+  </block>
+  <!-- 右侧固定 -->
+  <block wx:if="{{showway=='FIXED_RIGHT'}}">
+    <boxfixedrightbottommenu boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:showShareboxpopup="showShareboxpopup" bind:mobliestatus="mobliestatus"></boxfixedrightbottommenu>
+  </block>
+  <!--  多栏图片 -->
+  <block wx:if="{{showway=='MULTI_COLUMN_IMAGE'}}">
+    <boxmnavigetionmenu boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxmnavigetionmenu>
+  </block>
+  <!-- 一行无限滚动菜单 -->
+  <block wx:if="{{showway=='INFINITE_SCROLL_MENU'}}">
+    <boxinfinitescrollmenu boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}"></boxinfinitescrollmenu>
+  </block>
+  <!-- 底部导航菜单 -->
+  <block wx:if="{{showway=='BOTTOM_MENU'}}">
+    <block wx:if="{{!boxdata.module_content_empty}}">
+      <boxbottomnavmenu boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus" bind:wechatPay="notifyWechatPay"></boxbottomnavmenu>
+    </block>
+  </block>
+  <!-- 列表模块 -->
+  <block wx:if="{{showway=='LIST_MODULE'}}">
+    <boxlistmodule boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxlistmodule>
+  </block>
+  <!--  模块导航菜单 -->
+  <block wx:if="{{showway=='MODULE_NAV_MENU'}}">
+    <block wx:if="{{!boxdata.module_content_empty}}">
+      <boxmodulenavmenu boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause" bind:boxapplyMask="boxapplyMasks" boxindex="{{boxindex}}" boxbindmobile="{{boxbindmobile}}" bind:mobliestatus="mobliestatus"></boxmodulenavmenu>
+    </block>
+  </block>
+  <block wx:if="{{showway=='POPUP_AD'}}">
+    <block wx:if="{{!boxdata.module_content_empty}}">
+      <boxpopupad boxdata="{{boxdata}}" boxid="{{boxid}}" boxtype="{{boxtype}}"></boxpopupad>
+    </block>
+  </block>
+</view>
+
+
+<!-- 放大弹框图片 -->
+<view wx:if="{{showpupopMask}}" class="showpupopboxmask">
+  <view class="showpupopboxmask-content" style="height:794rpx">
+    <image wx:if="{{pupopIMG}}" src="{{pupopIMG}}?imageMogr2/thumbnail/!1035x1032r/interlace/0|imageMogr2/gravity/center/crop/1035x1032/auto-orient" style="width:690rpx;height:688rpx;display: block;margin: 0 auto;" bindtap="previewImg" show-menu-by-longpress="{{true}}" data-img="{{pupopIMG}}"></image>
+    <view class="close" bindtap="closepupopMask"></view>
+  </view>
+</view>
+<!-- 弹窗确认报名 -->
+<view wx:if="{{showapplypupopmask}}" class="applypupop_mask">
+  <view class="negativefactormask-content">
+    <view class="negativefactorcontent">
+      <block wx:if="{{snsapi_phonenumber=='0'}}">
+        <button class="resultsuccess" style="{{themeStyle}}" open-type="getPhoneNumber" bindgetphonenumber='BindapplyPupopPhoneNumber' hover-class="none">
+          <image class="resultsuccess" mode="widthFix" wx:if="{{image_content}}" src="{{image_content}}?imageMogr2/thumbnail/1035x/auto-orient" bindtap="applyPupop" />
+        </button>
+      </block>
+      <block wx:if="{{snsapi_phonenumber=='1'}}">
+        <image class="resultsuccess" mode="widthFix" wx:if="{{image_content}}" src="{{image_content}}?imageMogr2/thumbnail/1035x/auto-orient" bindtap="applyPupop" />
+      </block>
+    </view>
+    <image bindtap="_applypupopmasklosed" class="negativefactor-closed" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/closedx.png" />
+  </view>
+
+</view>
+
+<!-- 问答 -->
+<view wx:if="{{questionMask}}" class="boxquestionmask" catchtouchmove='true'>
+  <block wx:if="{{isshowapply}}">
+    <view class="applymask-content">
+      <image bindtap="_applyclosed" class="apply-closed" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/qaapplyclose.jpeg" />
+      <view class="applycontent">
+        <block wx:if="{{answer_tag_status=='PUBLISHED'}}">
+          <view class="qa-tit">问题标签</view>
+          <block wx:for="{{houseTags}}" wx:key="index">
+            <view class="qatag-content">
+              <view class="qa-title">{{item.name}}:</view>
+              <view class="qa_columlist">
+                <block wx:for="{{item.children}}" wx:key="subindex" wx:for-item="tags" wx:for-index="sindex">
+                  <view class="qa_colum_view {{tags.active?'active':''}}" style="{{themeStyle}}" bindtap="_setacreageIndex" data-index="{{index}}" data-subindex="{{sindex}}">
+                    {{tags.name}}
+                  </view>
+                </block>
+              </view>
+            </view>
+          </block>
+        </block>
+        <view class="qa-tit">您的问题</view>
+        <textarea class="applyinput" placeholder="请简单描述您的问题" data-name="content" value="{{content}}" bindinput="_nameinputHandle"></textarea>
+        <button class="button" style="{{themeStyle}}" bindtap="_submitapply">确认提交</button>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+  </block>
+</view>
+<!-- 专家详情-付费选择话题弹框 -->
+<view class='pay-topic-bg' wx:if="{{showtopicpupop}}">
+  <view class='location-inner'>
+    <view bindtap='_chooseorderclose' class="close">
+      <image src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/qaapplyclose.jpeg" class='arrow' />
+    </view>
+    <view style='padding:0 30rpx 20rpx;'>
+      <view class='new-location-label' style='padding:0rpx 0rpx 23rpx 0rpx;'>选择约聊的话题</view>
+      <view class='another'>
+        <view wx:for="{{settle_expert_goodsbox}}" wx:key="index" wx:for-item='item' bindtap="_setCurrentValue" class="another-item {{item.tempactive?'active':''}}" data-tempactive="{{item.tempactive}}" data-item="{{item}}" style="{{themeStyle}}">
+          {{item.title}} ¥{{item.price}}
+        </view>
+      </view>
+    </view>
+    <view class="orderconfirm" style="{{themeStyle}}" bindtap="_gotoOrder">确认</view>
+  </view>
+</view>
+
+<!-- 生成海报图片弹框 -->
+<view wx:if="{{showPosterMask}}" class="Posterboxmask">
+  <view class="Posterboxmask-content">
+    <view style="max-height:1000rpx;overflow: scroll;">
+      <image wx:if="{{postIMG}}" class="postimg" src="{{postIMG}}?imageMogr2/thumbnail/{{postimwidth}}x/auto-orient" mode="widthFix" style="width:{{postimwidth}}rpx;"></image>
+    </view>
+    <view wx:if="{{showPostTips}}" class="sharetitle" style="{{themeStyle}}">已保存到相册！</view>
+    <view class="close" bindtap="closeposter"></view>
+  </view>
+</view>
+
+<!-- 渠道列表弹框 -->
+<view class="businesschannelboxmask" wx:if="{{showclosebusinesschannelbox}}" catchtouchmove="true">
+  <view class="businesschannelboxmask-content">
+    <view style="width:690rpx;margin:0 auto;height:1000rpx;overflow: scroll;background: linear-gradient(177deg, #CF5C70 4%, #F6EDD4 32%, #FFFCF9 95%);border-radius: 25rpx;border: 1rpx solid #9FA0A0;">
+      <view style="padding:30rpx; box-sizing: border-box;">
+        <view class="searchinput_content">
+          <view class="search-rg">
+            <image class="image" src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/fullstacksearch.png"></image>
+            <input class="input" placeholder="请输入渠道名称" type='text' confirm-type="search" placeholder-class='place-holder' bindconfirm="searchbusinesschannelSubmit" value="{{searchbusinesschannelinputValue}}"></input>
+          </view>
+        </view>
+        <scroll-view scroll-y style="height: 800rpx;" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" refresher-background="ffffff" refresher-triggered="{{triggered}}" bindrefresherpulling="onPulling" bindrefresherrefresh="onRefresh" bindrefresherrestore="onRestore" bindrefresherabort="onAbort" bindscrolltolower="onTolower" bindscrolltolower="onLower">
+          <block wx:for="{{businesschannellist}}" wx:key="index">
+            <view class="businesschannel_flex">
+              <image src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/businesschannel_tit.png" style="width:50rpx;height:48rpx;" />
+              <view class="businesschannel_flex_tit">{{item.name}}</view>
+              <image src="https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/businesschannel_poster_button.png" style="width:138rpx;height:52rpx;" bindtap="showcreatedpost" data-item="{{item}}" />
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="close" bindtap="closebusinesschannelposter"></view>
+  </view>
+</view>
+
+<upadteuserinformation showpadteuserinformation="{{showpadteuserinformation}}" bind:getnewestuserinfo="_getnewestuserinfo"></upadteuserinformation>

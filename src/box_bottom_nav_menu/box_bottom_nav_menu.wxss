@@ -1,0 +1,24 @@
+.box_bottom_nav_menu {
+    width: 100%;
+    position: relative;
+}
+
+.box_bottom_nav_menu .tabbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+
+    /* background-color: #FFF; */
+    z-index: 9999;
+}
+
+.box_bottom_nav_menu .tabbar .tabbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

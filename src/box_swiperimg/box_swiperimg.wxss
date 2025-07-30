@@ -1,0 +1,5 @@
+.box_swiperimg {
+    width: 100%;
+    margin: 0rpx 0rpx 0rpx 0rpx;
+    position: relative;
+}

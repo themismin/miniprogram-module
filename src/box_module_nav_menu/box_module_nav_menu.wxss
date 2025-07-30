@@ -1,0 +1,10 @@
+.box_module_nav_menu {
+    width: 100%;
+    position: relative;
+}
+.box_module_nav_menu .navigation_menu_content .tab-icon {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

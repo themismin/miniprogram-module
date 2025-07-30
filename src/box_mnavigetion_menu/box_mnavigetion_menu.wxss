@@ -1,0 +1,11 @@
+.box_mnavigetion_menu {
+    width: 100%;
+    position: relative;
+}
+/* 中间多栏菜单 */
+.box_mnavigetion_menu .navigation_menu_content .tab-icon {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

@@ -1,0 +1,4 @@
+<view class="v7boxmodules" id="v7boxmodules"> 
+  <view wx:if="{{boxtitle}}" style="{{boxtitlestyle}}">{{boxtitle}}</view>
+  <box boxdata="{{boxdata}}" id="v7boxmodules_{{boxdata.id}}" boxid="{{boxid}}" videoisPlaying="{{videoisPlaying}}" bind:boxbonplay="boxbonplay" bind:boxonpause="boxonpause"  boxindex="{{boxindex}}"  boxbindmobile="{{boxbindmobile}}" bind:childChange="childChange" isOpenShare="{{isOpenShare}}"></box>
+</view>

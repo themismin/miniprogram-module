@@ -1,0 +1,33 @@
+.screen-mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60rpx;
+}
+
+.screen-body {
+  position: relative;
+}
+
+.screen-btn.close {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-image: url(https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/closedx.png);
+  background-size: 60rpx 60rpx;
+  position: absolute;
+  right: 0;
+  top: -120rpx;
+}
+
+.swiper button {
+  font-size: 0;
+}

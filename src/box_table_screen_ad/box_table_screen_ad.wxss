@@ -1,0 +1,36 @@
+.morebox {
+    width: 100%;
+    margin: 0rpx 0rpx 0rpx 0rpx;
+    position: relative;
+}
+/* 开机屏ad、定时弹窗 */
+.boxtable_screen_ad_mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+.boxtable_screen_ad_mask .mask-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 8rpx;
+    overflow: hidden;
+    z-index: 100;
+}
+.boxtable_screen_ad_mask .mask-content .close {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin: 0 auto;
+    line-height: 80rpx;
+    font-size: 36rpx;
+    background-image: url("https://guapikeji-1308841152.cos.ap-shanghai.myqcloud.com/assets/img/icon/common/closedx.png");
+    background-size: 60rpx 60rpx;
+    margin-top: 20rpx;
+}

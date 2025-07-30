@@ -1,0 +1,17 @@
+
+.phonebutton {
+    font-size: 26rpx;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0);
+    color: #808080;
+}
+.button-hover{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.share::after{
+    border:none !important;
+}
+

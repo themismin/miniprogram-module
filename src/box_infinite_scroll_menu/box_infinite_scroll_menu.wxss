@@ -1,0 +1,19 @@
+.box_infinite_scroll_menu {
+    width: 100%;
+    margin: 0rpx 0rpx 0rpx 0rpx;
+    /* position: relative; */
+}
+/* 一行无限滚动 */
+.box_infinite_scroll_menu .infinite_scroll_content {
+    display: flex;
+    white-space: nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.box_infinite_scroll_meu .infinite_scroll_content .infinite_scroll-item {
+    text-align: center;
+    display: inline-block;
+}
+.box_infinite_scroll_meu .infinite_scroll_content .infinite_scroll-item:last-child {
+    margin-right: 0rpx !important;
+}

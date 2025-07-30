@@ -1,0 +1,74 @@
+<block wx:if="{{boxcontainer.auth_type=='PHONE_NUMBER'}}">
+    <block wx:if="{{snsapi_phonenumber=='0'}}">
+        <button class="phonebutton" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" open-type="getPhoneNumber" data-item="{{boxcontainer}}" bindgetphonenumber='BindPhoneNumber' hover-class="none">
+            <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;"></image>
+        </button>
+    </block>
+    <block wx:if="{{snsapi_phonenumber=='1'}}">
+      <block wx:if="{{boxcontainer.operation_type=='JUMP_CUSTOMER_SERVICE'}}">
+          <button class="share" open-type="contact" hover-class="button-hover" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;display:inline-block;overflow:hidden;">
+              <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;vertical-align:top;overflow:hidden;"></image>
+          </button>
+      </block>
+      <image wx:else src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='gotoTarget' data-item="{{boxcontainer}}"></image>
+    </block>
+</block>
+<block wx:if="{{boxcontainer.auth_type=='USER_INFO'}}">
+    <block wx:if="{{boxcontainer.operation_type=='JUMP_CUSTOMER_SERVICE'}}">
+          <button class="share" open-type="contact" hover-class="button-hover" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;display:inline-block;overflow:hidden;">
+              <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;vertical-align:top;overflow:hidden;"></image>
+          </button>
+    </block>
+    <image wx:else src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='userinfoTarget' data-item="{{boxcontainer}}"></image>
+</block>
+<block wx:if="{{boxcontainer.auth_type=='NONE'}}">
+    <block wx:if="{{boxcontainer.operation_type!='SHARE'&&boxcontainer.operation_type!='PLAY_VIDEO'&&boxcontainer.operation_type!='SCROLL_TO_TOP'&&boxcontainer.operation_type!='JUMP_IDENTITY'&&boxcontainer.operation_type!='ONE_CLICK_APPLY' && boxcontainer.operation_type!='JUMP_CUSTOMER_SERVICE' && boxcontainer.operation_type!='WECHAT_PAY' && boxcontainer.operation_type!='INVITE'}}">
+
+        <image src="{{boxcontainer.module_content_highlight&&boxcontainer.operation_attrs.after_content?boxcontainer.operation_attrs.after_content:boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='gotoTarget' data-item="{{boxcontainer}}" data-dot="{{boxcontainer.dot}}"></image>
+                
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='JUMP_IDENTITY'}}">
+        <image src="{{boxcontainer.operation_attrs.whether_identity==1?boxcontainer.operation_attrs.after_content:boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='gotoTarget' data-item="{{boxcontainer}}" data-dot="{{boxcontainer.dot}}"></image>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='SHARE'}}">
+        <button class="share" open-type="share" hover-class="button-hover" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;display:inline-block;overflow:hidden;">
+            <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;vertical-align:top;overflow:hidden;"></image>
+        </button>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='JUMP_CUSTOMER_SERVICE'}}">
+        <button class="share" open-type="contact" hover-class="button-hover" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;display:inline-block;overflow:hidden;">
+            <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;vertical-align:top;overflow:hidden;"></image>
+        </button>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='PLAY_VIDEO'}}">
+        <view style="position: relative;">
+            <video style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;margin: 0;" data-src="{{boxcontainer.operation_attrs.material_video_content}}" src="{{boxcontainer.operation_attrs.material_video_content}}" bindfullscreenchange="handleFullScreenChange" bindended="handleVideoEnded" autoplay="{{autoplay}}" controls="true" show-center-play-btn="{{false}}" id="boxvideo"></video>
+            <view wx:if="{{!play}}" style="position:absolute;width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;top:0;left:0;">
+                <view style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;position: absolute;top: 0;left: 0;bottom: 0;right: 0;">
+                    <image style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;position: absolute;top:0rpx;left:0rpx;" catch:tap="controlVideo" src="{{boxcontainer.content}}" />
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='ONE_CLICK_APPLY'}}">
+        <block wx:if="{{snsapi_phonenumber=='0'}}">
+            <button class="phonebutton" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" open-type="getPhoneNumber" data-item="{{boxcontainer}}" bindgetphonenumber='BindPhoneNumber' hover-class="none">
+                <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;"></image>
+            </button>
+        </block>
+        <block wx:if="{{snsapi_phonenumber=='1'}}">
+            <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='gotoTarget' data-item="{{boxcontainer}}" data-dot="{{boxcontainer.dot}}"></image>
+        </block>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='SCROLL_TO_TOP'}}">
+        <image hidden="{{!visible ||!toggle}}" src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='gotoTarget' data-item="{{boxcontainer}}"></image>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='WECHAT_PAY'}}">
+      <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;" bindtap='notifyWechatPay'></image>
+    </block>
+    <block wx:if="{{boxcontainer.operation_type=='INVITE'}}">
+        <button open-type="share" data-operation_attrs="{{boxcontainer.operation_attrs}}">
+        <image src="{{boxcontainer.content}}" style="width:{{boxcontainer.attrs.width}}rpx;height:{{boxcontainer.attrs.height}}rpx;border-radius:{{boxcontainer.attrs.border_radius}}rpx;overflow:hidden;"></image>
+        </button>
+    </block>
+</block>

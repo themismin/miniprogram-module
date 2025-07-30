@@ -1,0 +1,13 @@
+.box_fixed_right_bottom_menu {
+    width: 100%;
+    margin: 0rpx 0rpx 0rpx 0rpx;
+    position: relative;
+}
+.box_fixed_right_bottom_menu .boxfixedbuttoncontent {
+    position: fixed;
+    right: 20rpx;
+    z-index: 9;
+}
+.box_fixed_right_bottom_menu .boxfixedbuttoncontent .boxfixedbuttoncontent-nav {
+    margin-bottom: 10rpx;
+}
