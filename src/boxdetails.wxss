@@ -1,17 +1,37 @@
 
 .phonebutton {
     font-size: 26rpx;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    margin: 0;
     text-align: left;
     background: rgba(0, 0, 0, 0);
     color: #808080;
+    line-height: 1;
+    display: block;
 }
+
+.phonebutton::after {
+    border: none;
+}
+
 .button-hover{
     background-color: rgba(0, 0, 0, 0);
 }
 
+.share {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    background: transparent;
+}
+
 .share::after{
-    border:none !important;
+    border: none !important;
+}
+
+/* 修复 button 内的 image 底部间隙 */
+.phonebutton image,
+.share image {
+    display: block;
 }
 

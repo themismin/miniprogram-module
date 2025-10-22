@@ -1,0 +1,23 @@
+# 自动检测文本文件并标准化换行符
+* text=auto
+
+# 小程序相关文件统一使用 LF
+*.js text eol=lf
+*.json text eol=lf
+*.wxml text eol=lf
+*.wxss text eol=lf
+*.wxs text eol=lf
+
+# 其他常见文本文件
+*.md text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# 图片等二进制文件
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+

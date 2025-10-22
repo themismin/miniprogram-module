@@ -2,5 +2,18 @@
     width: 100%;
     margin: 0rpx 0rpx 0rpx 0rpx;
     position: relative;
-    
+    line-height: 0;
+}
+
+/* 修复三大块图片底部空白 */
+.box_five_fixed_img image {
+    display: block;
+}
+
+.box_five_fixed_img view {
+    line-height: 0;
+}
+
+.box_fivechunkfixed_content {
+    line-height: 0;
 }

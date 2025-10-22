@@ -1,4 +1,7 @@
-
+/* 全局修复图片底部空白 */
+.morebox image {
+    display: block;
+}
 
 .boxmask1{
     position: fixed;

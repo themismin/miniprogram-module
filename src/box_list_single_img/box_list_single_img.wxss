@@ -2,4 +2,14 @@
     width: 100%;
     margin: 0rpx 0rpx 0rpx 0rpx;
     position: relative;
+    line-height: 0;
+}
+
+/* 修复图片底部空白 */
+.box_list_single_img image {
+    display: block;
+}
+
+.box_list_single_img view {
+    line-height: 0;
 }
